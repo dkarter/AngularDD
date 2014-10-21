@@ -1,9 +1,9 @@
 var app = angular.module('myapp',[])
   .controller('MyCtrl', function($scope) {
-   $scope.test = 'hello world';
    $scope.select = function (value) {
     $scope.selected = value;
    };
+
    $scope.categories = {
     data: [
       {
@@ -122,5 +122,8 @@ var app = angular.module('myapp',[])
       }
     ]
   };
+  
+  //select first
   $scope.selected = $scope.categories.data[0];
+
  });
