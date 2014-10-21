@@ -34,7 +34,8 @@ See src/dd.html for example
 ## Browser Compatibility
 
 Tested and working with:
-Safari 8.0
-Firefox 32.0.3 & 33
-Chrome 38.0
+
+- Safari 8.0
+- Firefox 32.0.3 & 33
+- Chrome 38.0
 
