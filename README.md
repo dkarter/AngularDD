@@ -4,6 +4,12 @@ A custom designed &lt;select> dropdown using Angular and Sass
 
 ## Installation
 
+Clone repo locally using
+
+```
+$ git clone [repo ssh clone url]
+```
+
 Using Bower run
 
 ```
