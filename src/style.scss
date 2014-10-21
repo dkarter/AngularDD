@@ -1,0 +1,107 @@
+// base values
+$fore_color: #989898;
+$back_color: #ececec;
+$dd_width: 250px;
+$arrow_size: 8px;
+$underline_spacing: 30px;
+$dd_popover_height: 180px;
+
+// computed values
+$dd_popover_width: $dd_width - 20;
+$down_arrow_x: $dd_width - 35px;
+$down_arrow_y: $underline_spacing + 5px;
+$dd_popover_y: $underline_spacing + 15px;
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    background: $back_color;
+    font-family: verdana;
+}
+
+.wrapper-dropdown {
+    
+    &::selection, *::selection { background: transparent; }
+
+    position: relative;
+    width: $dd_width;
+    padding: 10px;
+    margin: 0 auto;
+ 
+    background: transparent;
+    color: $fore_color;
+    outline: none;
+    cursor: pointer;
+    
+    // down arrow
+    &:before {
+        content: "";
+        position: relative;
+        top: $down_arrow_y;
+        left: $down_arrow_x;
+        width: 0;
+        height: 0;
+        border-left: $arrow_size solid transparent;
+        border-right: $arrow_size solid transparent;
+        border-top: $arrow_size solid $fore_color;
+    }
+
+    .label{
+        border-bottom: 2px solid $fore_color;
+        padding-bottom: $underline_spacing;
+        font-style: italic;
+        text-align: center;
+        height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+
+    .dropdown {
+        opacity: 0.98;
+        box-shadow: 2px 2px 5px (black + 200);
+        position: absolute;
+        top: $dd_popover_y;
+        z-index: 100;
+        padding: 0;
+        width: $dd_popover_width;
+        height: $dd_popover_height;
+        overflow: scroll;
+
+        background: $back_color + 10;
+        font-weight: normal; /* Overwrites previous font-weight: bold; */
+     
+        /* Hiding */
+        pointer-events: none;
+        display: none;
+
+        li { 
+          border-bottom: 1px solid ($back_color + 1);
+          padding: 10px;
+          list-style: none;
+          &:hover {
+              background: $back_color - 3;
+          }
+
+          a {
+            display: block;
+            text-decoration: none;
+            color: $fore_color;
+            
+            /* Hover state */
+          }
+        }
+     
+    }
+
+    &.active {
+      .dropdown {
+        display: block;
+        pointer-events: auto;
+      }
+    }
+}

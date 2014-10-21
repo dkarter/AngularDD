@@ -1,0 +1,31 @@
+{
+  "name": "custom-dd",
+  "version": "1.0.0",
+  "authors": [
+    "Dorian Karter <dkarter@gmail.com>"
+  ],
+  "description": "This is an angular directive which allows using customly themed selects",
+  "main": "dd.html",
+  "keywords": [
+    "custom",
+    "dropdown",
+    "select",
+    "theme",
+    "skin",
+    "design",
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "http://doriankarter.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.0",
+    "foundation-icon-fonts": "*"
+  }
+}
